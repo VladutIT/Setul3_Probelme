@@ -25,13 +25,9 @@ namespace Setul3_Probelme
 
             while(i<n1 || j<n2)
             {
-                if(v1[i]==v2[j] && m1!=0)
+                if(v1[i]==v2[j])
                 {
-                    m1 = v1[i];
-                }
-                if (v1[i] == v2[j])
-                {
-                    m2 = v1[i];
+                    Console.Write($"Intersectia este {v1[i]} ");
                 }
                 if(minn>v1[i])
                 {
@@ -49,8 +45,9 @@ namespace Setul3_Probelme
                 {
                     maxx = v2[i];
                 }
+                i++;
+                j++;
             }
-            Console.WriteLine($"Intersectia este {m1} {m2}");
             Console.WriteLine($"Reuniunea este {minn} {maxx}");
         }
     }
