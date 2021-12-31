@@ -7,11 +7,11 @@ namespace Setul3_Probelme
         static void Main(string[] args)
         {
             int[] v1 = new int[50];
-            int[] v2= new int[50];
-            int n1, n2,i=0,j=0;
+            int[] v2 = new int[50];
+            int n1, n2, i = 0, j = 0;
             n1 = int.Parse(Console.ReadLine());
-            int m1=0, m2=0,minn=10000,maxx = 0;
-            for(i=0;i<n1;i++)
+            int m1 = 0, m2 = 0, minn = 10000, maxx = 0;
+            for (i = 0; i < n1; i++)
             {
                 v1[i] = int.Parse(Console.ReadLine());
             }
@@ -23,9 +23,9 @@ namespace Setul3_Probelme
             i = 0;
             j = 0;
 
-            while(i<n1 || j<n2)
+            while (i < n1 || j < n2)
             {
-                if(v1[i]==v2[j] && m1!=0)
+                if (v1[i] == v2[j] && m1 != 0)
                 {
                     m1 = v1[i];
                 }
@@ -33,7 +33,7 @@ namespace Setul3_Probelme
                 {
                     m2 = v1[i];
                 }
-                if(minn>v1[i])
+                if (minn > v1[i])
                 {
                     minn = v1[i];
                 }
@@ -41,7 +41,7 @@ namespace Setul3_Probelme
                 {
                     minn = v2[i];
                 }
-                if (maxx<v1[i])
+                if (maxx < v1[i])
                 {
                     maxx = v1[i];
                 }
@@ -49,6 +49,8 @@ namespace Setul3_Probelme
                 {
                     maxx = v2[i];
                 }
+                i++;
+                j++;
             }
             Console.WriteLine($"Intersectia este {m1} {m2}");
             Console.WriteLine($"Reuniunea este {minn} {maxx}");
